@@ -7,17 +7,10 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "NSObject+ViewModel.h"
 
-typedef NS_ENUM(NSUInteger, VMRequestMode) {
-    VMRequestModeRefresh,
-    VMRequestModeMore,
-};
+@interface MMBaseViewModel : NSObject
 
-@interface MMBaseViewModel : NSObject{
-    NSURLSessionDataTask *_dataTask;
-}
-
-- (void)getDataWithRequestMode:(VMRequestMode)requestMode completionHandler:(void(^)(NSError *error))completionHandler;
-@property (nonatomic) NSURLSessionDataTask *dataTask;
+- (void)getDataWithRequestMode:(RequestMode)requestMode completionHandler:(void(^)(NSError *error))completionHandler;
 
 @end

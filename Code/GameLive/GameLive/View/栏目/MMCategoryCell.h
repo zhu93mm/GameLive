@@ -1,15 +1,13 @@
 //
-//  ViewController.h
+//  MMCategoryCell.h
 //  GameLive
 //
-//  Created by minmin on 16/6/26.
+//  Created by minmin on 16/6/27.
 //  Copyright © 2016年 minmin. All rights reserved.
 //
 
 #import <UIKit/UIKit.h>
 
-@interface ViewController : UIViewController
-
+@interface MMCategoryCell : UICollectionViewCell
 
 @end
-

@@ -7,12 +7,17 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		A5ED5BC21D20C7630032AE9C /* MMBaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A5ED5BC11D20C7630032AE9C /* MMBaseViewController.m */; };
+		A5ED5BD41D211D540032AE9C /* MMCategoriesViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A5ED5BD11D211D540032AE9C /* MMCategoriesViewController.m */; };
+		A5ED5BD51D211D540032AE9C /* MMCategoryViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A5ED5BD31D211D540032AE9C /* MMCategoryViewController.m */; };
+		A5ED5BD91D211D8B0032AE9C /* MMCategoriesViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = A5ED5BD81D211D8B0032AE9C /* MMCategoriesViewModel.m */; };
+		A5ED5BDF1D211DB60032AE9C /* MMCategoriesCell.m in Sources */ = {isa = PBXBuildFile; fileRef = A5ED5BDC1D211DB60032AE9C /* MMCategoriesCell.m */; };
+		A5ED5BE01D211DB60032AE9C /* MMCategoryCell.m in Sources */ = {isa = PBXBuildFile; fileRef = A5ED5BDE1D211DB60032AE9C /* MMCategoryCell.m */; };
 		A5F7B1D81D1FB0D2003AD0EF /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = A5F7B1D71D1FB0D2003AD0EF /* main.m */; };
 		A5F7B1DB1D1FB0D2003AD0EF /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = A5F7B1DA1D1FB0D2003AD0EF /* AppDelegate.m */; };
 		A5F7B1E11D1FB0D2003AD0EF /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A5F7B1DF1D1FB0D2003AD0EF /* Main.storyboard */; };
 		A5F7B1E31D1FB0D2003AD0EF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A5F7B1E21D1FB0D2003AD0EF /* Assets.xcassets */; };
 		A5F7B1E61D1FB0D2003AD0EF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A5F7B1E41D1FB0D2003AD0EF /* LaunchScreen.storyboard */; };
-		A5F7B1F91D1FC0FC003AD0EF /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A5F7B1F71D1FC0FC003AD0EF /* ViewController.m */; };
 		A5F7B1FC1D1FC1F2003AD0EF /* NSObject+ViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = A5F7B1FB1D1FC1F2003AD0EF /* NSObject+ViewModel.m */; };
 		A5F7B1FF1D1FC20C003AD0EF /* NSObject+AFNetWorking.m in Sources */ = {isa = PBXBuildFile; fileRef = A5F7B1FE1D1FC20C003AD0EF /* NSObject+AFNetWorking.m */; };
 		A5F7B2021D1FC22F003AD0EF /* NSObject+MJEXtension.m in Sources */ = {isa = PBXBuildFile; fileRef = A5F7B2011D1FC22F003AD0EF /* NSObject+MJEXtension.m */; };
@@ -25,13 +30,25 @@
 		A5F7B21A1D1FCD86003AD0EF /* NSString+MM.m in Sources */ = {isa = PBXBuildFile; fileRef = A5F7B2191D1FCD86003AD0EF /* NSString+MM.m */; };
 		A5F7B21D1D1FD618003AD0EF /* MMBaseViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = A5F7B21C1D1FD618003AD0EF /* MMBaseViewModel.m */; };
 		A5F7B2201D1FD7DF003AD0EF /* MMLiveListModel.m in Sources */ = {isa = PBXBuildFile; fileRef = A5F7B21F1D1FD7DF003AD0EF /* MMLiveListModel.m */; };
-		A5F7B2231D1FE24D003AD0EF /* MMCategoriesViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A5F7B2221D1FE24D003AD0EF /* MMCategoriesViewController.m */; };
+		A5F7B2261D1FF643003AD0EF /* MMCategoriesModel.m in Sources */ = {isa = PBXBuildFile; fileRef = A5F7B2251D1FF643003AD0EF /* MMCategoriesModel.m */; };
 		F13480DC7E29CF1580A82070 /* libPods-GameLive.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 0B2908C29245F6B3FA64784F /* libPods-GameLive.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		0B2908C29245F6B3FA64784F /* libPods-GameLive.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-GameLive.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		134FFF5A81D31AD92196055B /* Pods-GameLive.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GameLive.release.xcconfig"; path = "Pods/Target Support Files/Pods-GameLive/Pods-GameLive.release.xcconfig"; sourceTree = "<group>"; };
+		A5ED5BC01D20C7630032AE9C /* MMBaseViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MMBaseViewController.h; sourceTree = "<group>"; };
+		A5ED5BC11D20C7630032AE9C /* MMBaseViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MMBaseViewController.m; sourceTree = "<group>"; };
+		A5ED5BD01D211D540032AE9C /* MMCategoriesViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MMCategoriesViewController.h; sourceTree = "<group>"; };
+		A5ED5BD11D211D540032AE9C /* MMCategoriesViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MMCategoriesViewController.m; sourceTree = "<group>"; };
+		A5ED5BD21D211D540032AE9C /* MMCategoryViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MMCategoryViewController.h; sourceTree = "<group>"; };
+		A5ED5BD31D211D540032AE9C /* MMCategoryViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MMCategoryViewController.m; sourceTree = "<group>"; };
+		A5ED5BD71D211D8B0032AE9C /* MMCategoriesViewModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MMCategoriesViewModel.h; sourceTree = "<group>"; };
+		A5ED5BD81D211D8B0032AE9C /* MMCategoriesViewModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MMCategoriesViewModel.m; sourceTree = "<group>"; };
+		A5ED5BDB1D211DB60032AE9C /* MMCategoriesCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MMCategoriesCell.h; sourceTree = "<group>"; };
+		A5ED5BDC1D211DB60032AE9C /* MMCategoriesCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MMCategoriesCell.m; sourceTree = "<group>"; };
+		A5ED5BDD1D211DB60032AE9C /* MMCategoryCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MMCategoryCell.h; sourceTree = "<group>"; };
+		A5ED5BDE1D211DB60032AE9C /* MMCategoryCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MMCategoryCell.m; sourceTree = "<group>"; };
 		A5F7B1D31D1FB0D2003AD0EF /* GameLive.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GameLive.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A5F7B1D71D1FB0D2003AD0EF /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		A5F7B1D91D1FB0D2003AD0EF /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -40,8 +57,6 @@
 		A5F7B1E21D1FB0D2003AD0EF /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Assets.xcassets; path = ../Assets.xcassets; sourceTree = "<group>"; };
 		A5F7B1E51D1FB0D2003AD0EF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		A5F7B1E71D1FB0D2003AD0EF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		A5F7B1F61D1FC0FC003AD0EF /* ViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		A5F7B1F71D1FC0FC003AD0EF /* ViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		A5F7B1FA1D1FC1F2003AD0EF /* NSObject+ViewModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+ViewModel.h"; sourceTree = "<group>"; };
 		A5F7B1FB1D1FC1F2003AD0EF /* NSObject+ViewModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+ViewModel.m"; sourceTree = "<group>"; };
 		A5F7B1FD1D1FC20C003AD0EF /* NSObject+AFNetWorking.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+AFNetWorking.h"; sourceTree = "<group>"; };
@@ -69,8 +84,8 @@
 		A5F7B21C1D1FD618003AD0EF /* MMBaseViewModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MMBaseViewModel.m; sourceTree = "<group>"; };
 		A5F7B21E1D1FD7DF003AD0EF /* MMLiveListModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MMLiveListModel.h; sourceTree = "<group>"; };
 		A5F7B21F1D1FD7DF003AD0EF /* MMLiveListModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MMLiveListModel.m; sourceTree = "<group>"; };
-		A5F7B2211D1FE24D003AD0EF /* MMCategoriesViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MMCategoriesViewController.h; sourceTree = "<group>"; };
-		A5F7B2221D1FE24D003AD0EF /* MMCategoriesViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MMCategoriesViewController.m; sourceTree = "<group>"; };
+		A5F7B2241D1FF643003AD0EF /* MMCategoriesModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MMCategoriesModel.h; sourceTree = "<group>"; };
+		A5F7B2251D1FF643003AD0EF /* MMCategoriesModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MMCategoriesModel.m; sourceTree = "<group>"; };
 		F2A8939D688D764EB24CC2B8 /* Pods-GameLive.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GameLive.debug.xcconfig"; path = "Pods/Target Support Files/Pods-GameLive/Pods-GameLive.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -92,6 +107,37 @@
 				0B2908C29245F6B3FA64784F /* libPods-GameLive.a */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		A5ED5BCF1D211D540032AE9C /* 栏目 */ = {
+			isa = PBXGroup;
+			children = (
+				A5ED5BD01D211D540032AE9C /* MMCategoriesViewController.h */,
+				A5ED5BD11D211D540032AE9C /* MMCategoriesViewController.m */,
+				A5ED5BD21D211D540032AE9C /* MMCategoryViewController.h */,
+				A5ED5BD31D211D540032AE9C /* MMCategoryViewController.m */,
+			);
+			path = "栏目";
+			sourceTree = "<group>";
+		};
+		A5ED5BD61D211D8B0032AE9C /* 栏目 */ = {
+			isa = PBXGroup;
+			children = (
+				A5ED5BD71D211D8B0032AE9C /* MMCategoriesViewModel.h */,
+				A5ED5BD81D211D8B0032AE9C /* MMCategoriesViewModel.m */,
+			);
+			path = "栏目";
+			sourceTree = "<group>";
+		};
+		A5ED5BDA1D211DB60032AE9C /* 栏目 */ = {
+			isa = PBXGroup;
+			children = (
+				A5ED5BDB1D211DB60032AE9C /* MMCategoriesCell.h */,
+				A5ED5BDC1D211DB60032AE9C /* MMCategoriesCell.m */,
+				A5ED5BDD1D211DB60032AE9C /* MMCategoryCell.h */,
+				A5ED5BDE1D211DB60032AE9C /* MMCategoryCell.m */,
+			);
+			path = "栏目";
 			sourceTree = "<group>";
 		};
 		A5F7B1CA1D1FB0D2003AD0EF = {
@@ -179,6 +225,8 @@
 			children = (
 				A5F7B21E1D1FD7DF003AD0EF /* MMLiveListModel.h */,
 				A5F7B21F1D1FD7DF003AD0EF /* MMLiveListModel.m */,
+				A5F7B2241D1FF643003AD0EF /* MMCategoriesModel.h */,
+				A5F7B2251D1FF643003AD0EF /* MMCategoriesModel.m */,
 				A5F7B20E1D1FC31F003AD0EF /* MMBaseModel.h */,
 				A5F7B20F1D1FC31F003AD0EF /* MMBaseModel.m */,
 			);
@@ -221,6 +269,7 @@
 		A5F7B1F41D1FC0FC003AD0EF /* View */ = {
 			isa = PBXGroup;
 			children = (
+				A5ED5BDA1D211DB60032AE9C /* 栏目 */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -228,10 +277,9 @@
 		A5F7B1F51D1FC0FC003AD0EF /* ViewController */ = {
 			isa = PBXGroup;
 			children = (
-				A5F7B1F61D1FC0FC003AD0EF /* ViewController.h */,
-				A5F7B1F71D1FC0FC003AD0EF /* ViewController.m */,
-				A5F7B2211D1FE24D003AD0EF /* MMCategoriesViewController.h */,
-				A5F7B2221D1FE24D003AD0EF /* MMCategoriesViewController.m */,
+				A5ED5BCF1D211D540032AE9C /* 栏目 */,
+				A5ED5BC01D20C7630032AE9C /* MMBaseViewController.h */,
+				A5ED5BC11D20C7630032AE9C /* MMBaseViewController.m */,
 			);
 			path = ViewController;
 			sourceTree = "<group>";
@@ -239,6 +287,7 @@
 		A5F7B1F81D1FC0FC003AD0EF /* ViewModel */ = {
 			isa = PBXGroup;
 			children = (
+				A5ED5BD61D211D8B0032AE9C /* 栏目 */,
 				A5F7B21B1D1FD618003AD0EF /* MMBaseViewModel.h */,
 				A5F7B21C1D1FD618003AD0EF /* MMBaseViewModel.m */,
 			);
@@ -377,17 +426,22 @@
 			files = (
 				A5F7B2201D1FD7DF003AD0EF /* MMLiveListModel.m in Sources */,
 				A5F7B2131D1FC346003AD0EF /* MMLiveNetManager.m in Sources */,
+				A5ED5BE01D211DB60032AE9C /* MMCategoryCell.m in Sources */,
 				A5F7B20B1D1FC2BC003AD0EF /* UIView+HUD.m in Sources */,
 				A5F7B2021D1FC22F003AD0EF /* NSObject+MJEXtension.m in Sources */,
-				A5F7B1F91D1FC0FC003AD0EF /* ViewController.m in Sources */,
+				A5ED5BD91D211D8B0032AE9C /* MMCategoriesViewModel.m in Sources */,
+				A5ED5BDF1D211DB60032AE9C /* MMCategoriesCell.m in Sources */,
 				A5F7B1DB1D1FB0D2003AD0EF /* AppDelegate.m in Sources */,
-				A5F7B2231D1FE24D003AD0EF /* MMCategoriesViewController.m in Sources */,
 				A5F7B2081D1FC2A6003AD0EF /* AppDelegate+System.m in Sources */,
+				A5ED5BC21D20C7630032AE9C /* MMBaseViewController.m in Sources */,
+				A5F7B2261D1FF643003AD0EF /* MMCategoriesModel.m in Sources */,
 				A5F7B21A1D1FCD86003AD0EF /* NSString+MM.m in Sources */,
 				A5F7B1FC1D1FC1F2003AD0EF /* NSObject+ViewModel.m in Sources */,
 				A5F7B1D81D1FB0D2003AD0EF /* main.m in Sources */,
 				A5F7B2051D1FC28E003AD0EF /* UIScrollView+Refresh.m in Sources */,
 				A5F7B2171D1FCD68003AD0EF /* NSObject+Parse.m in Sources */,
+				A5ED5BD41D211D540032AE9C /* MMCategoriesViewController.m in Sources */,
+				A5ED5BD51D211D540032AE9C /* MMCategoryViewController.m in Sources */,
 				A5F7B2101D1FC31F003AD0EF /* MMBaseModel.m in Sources */,
 				A5F7B1FF1D1FC20C003AD0EF /* NSObject+AFNetWorking.m in Sources */,
 				A5F7B21D1D1FD618003AD0EF /* MMBaseViewModel.m in Sources */,

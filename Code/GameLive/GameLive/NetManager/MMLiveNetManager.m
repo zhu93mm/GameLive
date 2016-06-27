@@ -14,4 +14,10 @@
         !completionHandler ?: completionHandler([MMLiveListModel parseJSON:jsonObject], error);
     }];
 }
+
++ (id)getCategories:(id)requestType parameters:(NSDictionary *)parameters completionHandler:(void (^)(id , NSError *))completionHandler{
+    return [self GET:requestType parameters:parameters progress:nil completionHandler:^(id jsonObject, NSError *error) {
+        !completionHandler ?: completionHandler([MMCategoriesModel parseJSON:jsonObject], error);
+    }];
+}
 @end

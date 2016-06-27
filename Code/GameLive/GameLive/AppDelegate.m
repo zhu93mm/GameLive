@@ -7,6 +7,7 @@
 //
 
 #import "AppDelegate.h"
+#import "MMCategoriesViewController.h"
 //#import "MMLiveNetManager.h"
 
 @interface AppDelegate ()
@@ -21,11 +22,27 @@
     [self setupGlobalConfig];
     
     //用于测试解析是否成功
-//    MMLiveNetManager *manager = [MMLiveNetManager getGameData:nil parameters:nil completionHandler:^(MMLiveListModel *model, NSError *error) {
+//    MMLiveNetManager *manager = [MMLiveNetManager getCategories:kcategoriesPath parameters:nil completionHandler:^(id model, NSError *error) {
 //        NSLog(@"");
 //    }];
     
+    _window = [[UIWindow alloc] initWithFrame:[UIScreen mainScreen].bounds];
+    _window.backgroundColor = [UIColor whiteColor];
+    [_window makeKeyAndVisible];
+    
+    _window.rootViewController = self.tabC;
+
     return YES;
+}
+
+- (UITabBarController *)tabC {
+    if(_tabC == nil) {
+        _tabC = [[UITabBarController alloc] init];
+        MMCategoriesViewController *cateVC = [[MMCategoriesViewController alloc] init];
+        UINavigationController *cateNavi = [[UINavigationController alloc] initWithRootViewController:cateVC];
+        _tabC.viewControllers = @[cateNavi];
+    }
+    return _tabC;
 }
 
 @end

@@ -8,6 +8,13 @@
 
 #import <Foundation/Foundation.h>
 
+typedef NS_ENUM(NSUInteger, RequestMode) {
+    RequestModeRefresh,
+    RequestModeMore,
+};
+
 @interface NSObject (ViewModel)
+
+@property (nonatomic) NSURLSessionDataTask *dataTask;
 
 @end

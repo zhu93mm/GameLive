@@ -10,7 +10,6 @@
 #define RequestPaths_h
 
 #define kBasePath @"http://www.quanmin.tv"
-#define k k
 #define kcategoriesPath @"/json/categories/list.json"
 
 #endif /* RequestPaths_h */

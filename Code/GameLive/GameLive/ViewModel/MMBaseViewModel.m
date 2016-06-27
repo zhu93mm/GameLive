@@ -9,5 +9,5 @@
 #import "MMBaseViewModel.h"
 
 @implementation MMBaseViewModel
-- (void)getDataWithRequestMode:(VMRequestMode)requestMode completionHandler:(void (^)(NSError *))completionHandler{}
+- (void)getDataWithRequestMode:(RequestMode)requestMode completionHandler:(void (^)(NSError *))completionHandler{}
 @end
