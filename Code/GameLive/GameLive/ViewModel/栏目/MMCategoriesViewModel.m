@@ -26,6 +26,14 @@
     return [self modelForRow:row].name;
 }
 
+- (NSString *)slugForRow:(NSInteger)row{
+    return [self modelForRow:row].slug;
+}
+
+- (NSString *)categoryNameForRow:(NSInteger)row{
+    return [self modelForRow:row].name;
+}
+
 - (void)getDataWithRequestMode:(RequestMode)requestMode completionHandler:(void (^)(NSError *))completionHandler{
     self.dataTask = [MMLiveNetManager getCategories:kcategoriesPath parameters:nil completionHandler:^(id model, NSError *error) {
         if (!error) {

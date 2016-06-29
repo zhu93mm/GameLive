@@ -12,6 +12,11 @@
 
 - (instancetype)initWithFrame:(CGRect)frame{
     if (self = [super initWithFrame:frame]) {
+        self.contentView.clipsToBounds = YES;
+        self.clipsToBounds=YES;
+        self.backgroundView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"分类"]];
+        self.backgroundView.contentMode = UIViewContentModeScaleAspectFill;
+        
         UIView *whiteV = [[UIView alloc] initWithFrame:CGRectZero];
         [self.contentView addSubview:whiteV];
         [whiteV mas_makeConstraints:^(MASConstraintMaker *make) {
@@ -43,6 +48,8 @@
             make.bottom.equalTo(-3);
             make.height.equalTo(33);
         }];
+        [_nameLb setTextAlignment:NSTextAlignmentCenter];
+        _nameLb.textColor = [UIColor whiteColor];
     }
     return _nameLb;
 }

@@ -11,8 +11,6 @@
 #import "MMCategoriesCell.h"
 #import "MMCategoryViewController.h"
 
-#define kBGColor kRGBColor(234,234,234,1)
-
 @interface MMCategoriesViewController ()<UICollectionViewDelegate,UICollectionViewDataSource>
 @property (nonatomic) MMCategoriesViewModel *cateVM;
 @property (nonatomic) UICollectionView *collectionView;
@@ -36,10 +34,11 @@
 }
 
 - (void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath{
-    [collectionView deselectItemAtIndexPath:indexPath animated:YES];
-    MMCategoryViewController *categoryVC = [[MMCategoryViewController alloc] init];
+    //[collectionView deselectItemAtIndexPath:indexPath animated:YES];
+    MMCategoryViewController *categoryVC = [[MMCategoryViewController alloc] initWithSlug:[self.cateVM slugForRow:indexPath.row] categoryName:[self.cateVM categoryNameForRow:indexPath.row]];
     [self.navigationController pushViewController:categoryVC animated:YES];
 }
+
 
 #pragma mark - LifeCycle 生命周期
 - (instancetype)init{
@@ -52,15 +51,8 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     self.navigationItem.title = @"游戏栏目";
-    WK(weakSelf);
-    [weakSelf.cateVM getDataWithRequestMode:RequestModeRefresh completionHandler:^(NSError *error) {
-        if (error) {
-            NSLog(@"%@", error);
-        }else{
-            [weakSelf.collectionView reloadData];
-        }
-    }];
-    [self collectionView];
+    
+    [self.collectionView beginHeaderRefresh];
 }
 
 - (void)didReceiveMemoryWarning {
@@ -87,6 +79,20 @@
         _collectionView.delegate = self;
         _collectionView.dataSource = self;
         _collectionView.backgroundColor = kBGColor;
+        
+        WK(weakSelf);
+        [_collectionView addHeaderRefresh:^{
+            [weakSelf.cateVM getDataWithRequestMode:RequestModeRefresh completionHandler:^(NSError *error) {
+                if (error) {
+                    NSLog(@"%@", error);
+                }else{
+                    [weakSelf.collectionView reloadData];
+                }
+                [weakSelf.collectionView endHeaderRefresh];
+            }];
+        }];
+        
+        
         [_collectionView registerClass:[MMCategoriesCell class] forCellWithReuseIdentifier:@"Cell"];
 	}
 	return _collectionView;

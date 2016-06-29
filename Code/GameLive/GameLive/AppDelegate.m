@@ -8,6 +8,7 @@
 
 #import "AppDelegate.h"
 #import "MMCategoriesViewController.h"
+#import "MMLiveListViewController.h"
 //#import "MMLiveNetManager.h"
 
 @interface AppDelegate ()
@@ -22,7 +23,7 @@
     [self setupGlobalConfig];
     
     //用于测试解析是否成功
-//    MMLiveNetManager *manager = [MMLiveNetManager getCategories:kcategoriesPath parameters:nil completionHandler:^(id model, NSError *error) {
+//    MMLiveNetManager *manager = [MMLiveNetManager getcategory:@"lol" page:0 completionHandler:^(id model, NSError *error) {
 //        NSLog(@"");
 //    }];
     
@@ -39,8 +40,10 @@
     if(_tabC == nil) {
         _tabC = [[UITabBarController alloc] init];
         MMCategoriesViewController *cateVC = [[MMCategoriesViewController alloc] init];
+        MMLiveListViewController *liveListVC = [[MMLiveListViewController alloc] init];
         UINavigationController *cateNavi = [[UINavigationController alloc] initWithRootViewController:cateVC];
-        _tabC.viewControllers = @[cateNavi];
+        UINavigationController *liveListNavi = [[UINavigationController alloc] initWithRootViewController:liveListVC];
+        _tabC.viewControllers = @[cateNavi, liveListNavi];
     }
     return _tabC;
 }

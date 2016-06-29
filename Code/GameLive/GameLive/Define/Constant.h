@@ -29,4 +29,8 @@
 #define WK(weakSelf) \
 __weak __typeof(&*self)weakSelf = self;\
 
+#define kBGColor kRGBColor(234,234,234,1)
+/** 全局的粉色 */
+#define kNaviBarBGColor kRGBColor(251, 51, 41, 1)
+
 #endif /* Constant_h */

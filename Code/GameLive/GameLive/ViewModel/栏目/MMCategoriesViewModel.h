@@ -17,5 +17,7 @@
 - (NSURL *)iconURLForRow:(NSInteger)row;
 - (NSString *)titleForRow:(NSInteger)row;
 - (MMCategoriesModel *)modelForRow:(NSInteger)row;
+- (NSString *)slugForRow:(NSInteger)row;
+- (NSString *)categoryNameForRow:(NSInteger)row;
 
 @end

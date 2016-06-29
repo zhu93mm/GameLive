@@ -20,4 +20,26 @@
         !completionHandler ?: completionHandler([MMCategoriesModel parseJSON:jsonObject], error);
     }];
 }
+
++ (id)getRoomListWithPage:(NSInteger)page completionHandler:(void (^)(id, NSError *))completionHandler{
+    NSString *pageStr = [NSString stringWithFormat:@"_%ld", page];
+    if (page == 0) {
+        pageStr = @"";
+    }
+    NSString *path = [NSString stringWithFormat:kRoomsPath, pageStr];
+    return [self GET:path parameters:nil progress:nil completionHandler:^(id jsonObject, NSError *error) {
+        !completionHandler ?: completionHandler([MMLiveListModel parseJSON:jsonObject], error);
+    }];
+}
+
++ (id)getCategory:(NSString *)slug page:(NSInteger)page completionHandler:(void (^)(id, NSError *))completionHandler{
+    NSString *pageStr = [NSString stringWithFormat:@"_%ld", page];
+    if (page == 0) {
+        pageStr = @"";
+    }
+    NSString *path = [NSString stringWithFormat:kCategoryRoomsPath, slug, pageStr];
+    return [self GET:path parameters:nil progress:nil completionHandler:^(id jsonObject, NSError *error) {
+        !completionHandler ?: completionHandler([MMCategoryModel parseJSON:jsonObject], error);
+    }];
+}
 @end

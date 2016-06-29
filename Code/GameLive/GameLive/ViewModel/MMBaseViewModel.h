@@ -8,6 +8,7 @@
 
 #import <Foundation/Foundation.h>
 #import "NSObject+ViewModel.h"
+#import "MMLiveNetManager.h"
 
 @interface MMBaseViewModel : NSObject
 
