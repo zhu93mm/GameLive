@@ -23,6 +23,7 @@ target 'GameLive' do
   pod 'YYKit'
   pod 'MBProgressHUD'
   pod 'MJRefresh'
+  pod 'iCarousel'
 
 end
 

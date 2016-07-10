@@ -32,6 +32,10 @@
     return cell;
 }
 
+- (void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath{
+    [Factory playVideo:[self.liveListVM videoURLForRow:indexPath.row]];
+}
+
 #pragma mark - LifeCycle 生命周期
 - (instancetype)init{
     if (self = [super init]) {

@@ -42,4 +42,11 @@
         !completionHandler ?: completionHandler([MMCategoryModel parseJSON:jsonObject], error);
     }];
 }
+
++ (id)getIntroCompletionHandler:(void (^)(id, NSError *))completionHandler{
+    return [self GET:kIntroPath parameters:nil progress:nil completionHandler:^(id jsonObject, NSError *error) {
+        !completionHandler ?: completionHandler([MMIntroModel parse:jsonObject], error);
+    }];
+}
+
 @end

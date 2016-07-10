@@ -7,10 +7,15 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		A50EAFE21D2D305600139C83 /* Factory.m in Sources */ = {isa = PBXBuildFile; fileRef = A50EAFE11D2D305600139C83 /* Factory.m */; };
+		A53CAF661D2F8D66007EE214 /* MMIntroModel.m in Sources */ = {isa = PBXBuildFile; fileRef = A53CAF651D2F8D66007EE214 /* MMIntroModel.m */; };
+		A53CAF6A1D2FA7E0007EE214 /* MMIntroViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = A53CAF691D2FA7E0007EE214 /* MMIntroViewModel.m */; };
 		A57B8EE71D21338E007DC601 /* MMCategoriesModel.m in Sources */ = {isa = PBXBuildFile; fileRef = A57B8EE61D21338E007DC601 /* MMCategoriesModel.m */; };
 		A57B8EEB1D21339A007DC601 /* MMLiveListModel.m in Sources */ = {isa = PBXBuildFile; fileRef = A57B8EEA1D21339A007DC601 /* MMLiveListModel.m */; };
 		A57B8EF11D21354E007DC601 /* MMLiveListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A57B8EF01D21354E007DC601 /* MMLiveListViewController.m */; };
 		A57B8EF41D214A42007DC601 /* MMLiveListCell.m in Sources */ = {isa = PBXBuildFile; fileRef = A57B8EF31D214A42007DC601 /* MMLiveListCell.m */; };
+		A59CA7AC1D23EE3E00B9B081 /* MMChatViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A59CA7AB1D23EE3E00B9B081 /* MMChatViewController.m */; };
+		A59CA7B51D23F59300B9B081 /* MMPlayerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A59CA7B41D23F59300B9B081 /* MMPlayerViewController.m */; };
 		A5D7EB4B1D22304800176E5F /* MMLiveListViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = A5D7EB4A1D22304800176E5F /* MMLiveListViewModel.m */; };
 		A5D7ED801D229B0400176E5F /* MMCategoryModel.m in Sources */ = {isa = PBXBuildFile; fileRef = A5D7ED7F1D229B0400176E5F /* MMCategoryModel.m */; };
 		A5D7ED831D22A19E00176E5F /* MMCategoryViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = A5D7ED821D22A19E00176E5F /* MMCategoryViewModel.m */; };
@@ -20,6 +25,8 @@
 		A5ED5BD91D211D8B0032AE9C /* MMCategoriesViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = A5ED5BD81D211D8B0032AE9C /* MMCategoriesViewModel.m */; };
 		A5ED5BDF1D211DB60032AE9C /* MMCategoriesCell.m in Sources */ = {isa = PBXBuildFile; fileRef = A5ED5BDC1D211DB60032AE9C /* MMCategoriesCell.m */; };
 		A5ED5BE01D211DB60032AE9C /* MMCategoryCell.m in Sources */ = {isa = PBXBuildFile; fileRef = A5ED5BDE1D211DB60032AE9C /* MMCategoryCell.m */; };
+		A5EE550D1D2DF0FB002AFA13 /* MMIntroViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A5EE550C1D2DF0FB002AFA13 /* MMIntroViewController.m */; };
+		A5EE55111D2E1878002AFA13 /* MMIntroIndexCell.m in Sources */ = {isa = PBXBuildFile; fileRef = A5EE55101D2E1878002AFA13 /* MMIntroIndexCell.m */; };
 		A5F7B1D81D1FB0D2003AD0EF /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = A5F7B1D71D1FB0D2003AD0EF /* main.m */; };
 		A5F7B1DB1D1FB0D2003AD0EF /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = A5F7B1DA1D1FB0D2003AD0EF /* AppDelegate.m */; };
 		A5F7B1E11D1FB0D2003AD0EF /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A5F7B1DF1D1FB0D2003AD0EF /* Main.storyboard */; };
@@ -42,6 +49,12 @@
 /* Begin PBXFileReference section */
 		0B2908C29245F6B3FA64784F /* libPods-GameLive.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-GameLive.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		134FFF5A81D31AD92196055B /* Pods-GameLive.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GameLive.release.xcconfig"; path = "Pods/Target Support Files/Pods-GameLive/Pods-GameLive.release.xcconfig"; sourceTree = "<group>"; };
+		A50EAFE01D2D305600139C83 /* Factory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Factory.h; sourceTree = "<group>"; };
+		A50EAFE11D2D305600139C83 /* Factory.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Factory.m; sourceTree = "<group>"; };
+		A53CAF641D2F8D66007EE214 /* MMIntroModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MMIntroModel.h; sourceTree = "<group>"; };
+		A53CAF651D2F8D66007EE214 /* MMIntroModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MMIntroModel.m; sourceTree = "<group>"; };
+		A53CAF681D2FA7E0007EE214 /* MMIntroViewModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MMIntroViewModel.h; sourceTree = "<group>"; };
+		A53CAF691D2FA7E0007EE214 /* MMIntroViewModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MMIntroViewModel.m; sourceTree = "<group>"; };
 		A57B8EE51D21338E007DC601 /* MMCategoriesModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MMCategoriesModel.h; sourceTree = "<group>"; };
 		A57B8EE61D21338E007DC601 /* MMCategoriesModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MMCategoriesModel.m; sourceTree = "<group>"; };
 		A57B8EE91D21339A007DC601 /* MMLiveListModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MMLiveListModel.h; sourceTree = "<group>"; };
@@ -50,6 +63,10 @@
 		A57B8EF01D21354E007DC601 /* MMLiveListViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MMLiveListViewController.m; sourceTree = "<group>"; };
 		A57B8EF21D214A42007DC601 /* MMLiveListCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MMLiveListCell.h; sourceTree = "<group>"; };
 		A57B8EF31D214A42007DC601 /* MMLiveListCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MMLiveListCell.m; sourceTree = "<group>"; };
+		A59CA7AA1D23EE3E00B9B081 /* MMChatViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MMChatViewController.h; sourceTree = "<group>"; };
+		A59CA7AB1D23EE3E00B9B081 /* MMChatViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MMChatViewController.m; sourceTree = "<group>"; };
+		A59CA7B31D23F59300B9B081 /* MMPlayerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MMPlayerViewController.h; sourceTree = "<group>"; };
+		A59CA7B41D23F59300B9B081 /* MMPlayerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MMPlayerViewController.m; sourceTree = "<group>"; };
 		A5D7EB491D22304800176E5F /* MMLiveListViewModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MMLiveListViewModel.h; sourceTree = "<group>"; };
 		A5D7EB4A1D22304800176E5F /* MMLiveListViewModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MMLiveListViewModel.m; sourceTree = "<group>"; };
 		A5D7ED7E1D229B0400176E5F /* MMCategoryModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MMCategoryModel.h; sourceTree = "<group>"; };
@@ -68,6 +85,10 @@
 		A5ED5BDC1D211DB60032AE9C /* MMCategoriesCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MMCategoriesCell.m; sourceTree = "<group>"; };
 		A5ED5BDD1D211DB60032AE9C /* MMCategoryCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MMCategoryCell.h; sourceTree = "<group>"; };
 		A5ED5BDE1D211DB60032AE9C /* MMCategoryCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MMCategoryCell.m; sourceTree = "<group>"; };
+		A5EE550B1D2DF0FB002AFA13 /* MMIntroViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MMIntroViewController.h; sourceTree = "<group>"; };
+		A5EE550C1D2DF0FB002AFA13 /* MMIntroViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MMIntroViewController.m; sourceTree = "<group>"; };
+		A5EE550F1D2E1878002AFA13 /* MMIntroIndexCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MMIntroIndexCell.h; sourceTree = "<group>"; };
+		A5EE55101D2E1878002AFA13 /* MMIntroIndexCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MMIntroIndexCell.m; sourceTree = "<group>"; };
 		A5F7B1D31D1FB0D2003AD0EF /* GameLive.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GameLive.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A5F7B1D71D1FB0D2003AD0EF /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		A5F7B1D91D1FB0D2003AD0EF /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -124,6 +145,24 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		A53CAF631D2F8D28007EE214 /* 推荐 */ = {
+			isa = PBXGroup;
+			children = (
+				A53CAF641D2F8D66007EE214 /* MMIntroModel.h */,
+				A53CAF651D2F8D66007EE214 /* MMIntroModel.m */,
+			);
+			path = "推荐";
+			sourceTree = "<group>";
+		};
+		A53CAF671D2FA7B2007EE214 /* 推荐 */ = {
+			isa = PBXGroup;
+			children = (
+				A53CAF681D2FA7E0007EE214 /* MMIntroViewModel.h */,
+				A53CAF691D2FA7E0007EE214 /* MMIntroViewModel.m */,
+			);
+			path = "推荐";
+			sourceTree = "<group>";
+		};
 		A57B8EE11D21313F007DC601 /* 直播 */ = {
 			isa = PBXGroup;
 			children = (
@@ -171,6 +210,24 @@
 			path = "直播";
 			sourceTree = "<group>";
 		};
+		A59CA7A51D23C3C700B9B081 /* 其他 */ = {
+			isa = PBXGroup;
+			children = (
+				A59CA7B31D23F59300B9B081 /* MMPlayerViewController.h */,
+				A59CA7B41D23F59300B9B081 /* MMPlayerViewController.m */,
+			);
+			name = "其他";
+			sourceTree = "<group>";
+		};
+		A59CA7A91D23EDC800B9B081 /* 聊一聊 */ = {
+			isa = PBXGroup;
+			children = (
+				A59CA7AA1D23EE3E00B9B081 /* MMChatViewController.h */,
+				A59CA7AB1D23EE3E00B9B081 /* MMChatViewController.m */,
+			);
+			name = "聊一聊";
+			sourceTree = "<group>";
+		};
 		A5ED5BCF1D211D540032AE9C /* 栏目 */ = {
 			isa = PBXGroup;
 			children = (
@@ -202,6 +259,24 @@
 				A5ED5BDE1D211DB60032AE9C /* MMCategoryCell.m */,
 			);
 			path = "栏目";
+			sourceTree = "<group>";
+		};
+		A5EE550A1D2DF0FB002AFA13 /* 推荐 */ = {
+			isa = PBXGroup;
+			children = (
+				A5EE550B1D2DF0FB002AFA13 /* MMIntroViewController.h */,
+				A5EE550C1D2DF0FB002AFA13 /* MMIntroViewController.m */,
+			);
+			path = "推荐";
+			sourceTree = "<group>";
+		};
+		A5EE550E1D2E1835002AFA13 /* 推荐 */ = {
+			isa = PBXGroup;
+			children = (
+				A5EE550F1D2E1878002AFA13 /* MMIntroIndexCell.h */,
+				A5EE55101D2E1878002AFA13 /* MMIntroIndexCell.m */,
+			);
+			path = "推荐";
 			sourceTree = "<group>";
 		};
 		A5F7B1CA1D1FB0D2003AD0EF = {
@@ -287,6 +362,7 @@
 		A5F7B1EF1D1FC0FC003AD0EF /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				A53CAF631D2F8D28007EE214 /* 推荐 */,
 				A57B8EE41D21338E007DC601 /* 栏目 */,
 				A57B8EE81D21339A007DC601 /* 直播 */,
 				A5F7B20E1D1FC31F003AD0EF /* MMBaseModel.h */,
@@ -317,6 +393,8 @@
 		A5F7B1F21D1FC0FC003AD0EF /* Tool */ = {
 			isa = PBXGroup;
 			children = (
+				A50EAFE01D2D305600139C83 /* Factory.h */,
+				A50EAFE11D2D305600139C83 /* Factory.m */,
 			);
 			path = Tool;
 			sourceTree = "<group>";
@@ -331,6 +409,7 @@
 		A5F7B1F41D1FC0FC003AD0EF /* View */ = {
 			isa = PBXGroup;
 			children = (
+				A5EE550E1D2E1835002AFA13 /* 推荐 */,
 				A5ED5BDA1D211DB60032AE9C /* 栏目 */,
 				A57B8EE21D21315E007DC601 /* 直播 */,
 			);
@@ -340,8 +419,11 @@
 		A5F7B1F51D1FC0FC003AD0EF /* ViewController */ = {
 			isa = PBXGroup;
 			children = (
+				A5EE550A1D2DF0FB002AFA13 /* 推荐 */,
 				A5ED5BCF1D211D540032AE9C /* 栏目 */,
 				A57B8EE11D21313F007DC601 /* 直播 */,
+				A59CA7A91D23EDC800B9B081 /* 聊一聊 */,
+				A59CA7A51D23C3C700B9B081 /* 其他 */,
 				A5ED5BC01D20C7630032AE9C /* MMBaseViewController.h */,
 				A5ED5BC11D20C7630032AE9C /* MMBaseViewController.m */,
 			);
@@ -351,6 +433,7 @@
 		A5F7B1F81D1FC0FC003AD0EF /* ViewModel */ = {
 			isa = PBXGroup;
 			children = (
+				A53CAF671D2FA7B2007EE214 /* 推荐 */,
 				A5ED5BD61D211D8B0032AE9C /* 栏目 */,
 				A57B8EE31D213173007DC601 /* 直播 */,
 				A5F7B21B1D1FD618003AD0EF /* MMBaseViewModel.h */,
@@ -490,22 +573,29 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A53CAF661D2F8D66007EE214 /* MMIntroModel.m in Sources */,
 				A5F7B2131D1FC346003AD0EF /* MMLiveNetManager.m in Sources */,
 				A5ED5BE01D211DB60032AE9C /* MMCategoryCell.m in Sources */,
+				A50EAFE21D2D305600139C83 /* Factory.m in Sources */,
 				A5F7B20B1D1FC2BC003AD0EF /* UIView+HUD.m in Sources */,
 				A5F7B2021D1FC22F003AD0EF /* NSObject+MJEXtension.m in Sources */,
 				A57B8EF41D214A42007DC601 /* MMLiveListCell.m in Sources */,
 				A57B8EF11D21354E007DC601 /* MMLiveListViewController.m in Sources */,
 				A5D7ED801D229B0400176E5F /* MMCategoryModel.m in Sources */,
+				A59CA7AC1D23EE3E00B9B081 /* MMChatViewController.m in Sources */,
 				A5ED5BD91D211D8B0032AE9C /* MMCategoriesViewModel.m in Sources */,
 				A5ED5BDF1D211DB60032AE9C /* MMCategoriesCell.m in Sources */,
 				A5F7B1DB1D1FB0D2003AD0EF /* AppDelegate.m in Sources */,
 				A57B8EE71D21338E007DC601 /* MMCategoriesModel.m in Sources */,
+				A5EE550D1D2DF0FB002AFA13 /* MMIntroViewController.m in Sources */,
+				A53CAF6A1D2FA7E0007EE214 /* MMIntroViewModel.m in Sources */,
 				A5D7EB4B1D22304800176E5F /* MMLiveListViewModel.m in Sources */,
 				A5F7B2081D1FC2A6003AD0EF /* AppDelegate+System.m in Sources */,
 				A5ED5BC21D20C7630032AE9C /* MMBaseViewController.m in Sources */,
+				A5EE55111D2E1878002AFA13 /* MMIntroIndexCell.m in Sources */,
 				A5F7B21A1D1FCD86003AD0EF /* NSString+MM.m in Sources */,
 				A5F7B1FC1D1FC1F2003AD0EF /* NSObject+ViewModel.m in Sources */,
+				A59CA7B51D23F59300B9B081 /* MMPlayerViewController.m in Sources */,
 				A5F7B1D81D1FB0D2003AD0EF /* main.m in Sources */,
 				A5F7B2051D1FC28E003AD0EF /* UIScrollView+Refresh.m in Sources */,
 				A5F7B2171D1FCD68003AD0EF /* NSObject+Parse.m in Sources */,

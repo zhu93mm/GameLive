@@ -32,6 +32,10 @@
     return cell;
 }
 
+- (void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath{
+    
+}
+
 #pragma mark - LifeCycle 生命周期
 - (instancetype)initWithSlug:(NSString *)slug categoryName:(NSString *)categoryName{
     if (self = [super init]) {
