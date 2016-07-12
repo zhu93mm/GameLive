@@ -44,6 +44,8 @@
 - (instancetype)init{
     if (self = [super init]) {
         self.title = @"栏目";
+        self.tabBarItem.image = [UIImage imageNamed:@"栏目-默认"];
+        self.tabBarItem.selectedImage = [UIImage imageNamed:@"栏目-焦点"];
     }
     return self;
 }

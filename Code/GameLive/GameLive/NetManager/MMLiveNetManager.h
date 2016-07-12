@@ -11,6 +11,7 @@
 #import "MMCategoriesModel.h"
 #import "MMCategoryModel.h"
 #import "MMIntroModel.h"
+#import "MMSearchModel.h"
 
 @interface MMLiveNetManager : NSObject
 + (id)getGameData:(id)requestType parameters:(NSDictionary *)parameters completionHandler:(void(^)(MMLiveListModel *model, NSError *error))completionHandler;
@@ -22,4 +23,7 @@
 + (id)getCategory:(NSString *)slug page:(NSInteger)page completionHandler:(void(^)(id model, NSError *error))completionHandler;
 
 + (id)getIntroCompletionHandler:(void(^)(id model, NSError *error))completionHandler;
+
+/** 搜索 */
++ (id)search:(NSString *)words page:(NSInteger)page completionHandler:(void(^)(id model, NSError *error))completionHandler;
 @end

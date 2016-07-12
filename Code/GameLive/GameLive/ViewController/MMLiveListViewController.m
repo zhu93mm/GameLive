@@ -40,6 +40,8 @@
 - (instancetype)init{
     if (self = [super init]) {
         self.title = @"直播";
+        self.tabBarItem.image = [UIImage imageNamed:@"发现_默认"];
+        self.tabBarItem.selectedImage = [UIImage imageNamed:@"发现-焦点"];
     }
     return self;
 }

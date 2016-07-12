@@ -11,21 +11,40 @@
 #import "MMIntroIndexCell.h"
 #import "MMCategoryCell.h"
 #import "MMIntroViewModel.h"
+#import "MMIntroSectionHeaderView.h"
+#import "MMCategoryViewController.h"
+#import "MMSearchViewController.h"
 
-@interface MMIntroViewController ()<iCarouselDelegate, iCarouselDataSource, UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout>
+@interface MMIntroViewController ()<iCarouselDelegate, iCarouselDataSource, UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout, MMIntroSectionHeaderViewDelegate>
 @property (nonatomic) UICollectionView *collectionView;
-@property (nonatomic) MMIntroViewModel *IntroVM;
+@property (nonatomic) MMIntroViewModel *introVM;
 
 @end
 
 @implementation MMIntroViewController
+#pragma mark - TRIntroSectionHeaderView Delegate
+- (void)introSectionHeaderView:(MMIntroSectionHeaderView *)headerView clickBtnAtIndexPath:(NSIndexPath *)indexPath{
+    switch (headerView.btnMode) {
+        case IntroBtnModeChange: {
+            [self.introVM changeCurrentRecommentList];
+            [_collectionView reloadSections:[NSIndexSet indexSetWithIndex:1]];
+            break;
+        }
+        case IntroBtnModeMore: {
+            NSIndexPath *tmpIndexPath = [NSIndexPath indexPathForRow:indexPath.row inSection:indexPath.section - 2];
+            MMCategoryViewController *vc = [[MMCategoryViewController alloc] initWithSlug:[self.introVM linkSlugForIndexPath:tmpIndexPath] categoryName:[self.introVM linkCategoryNameForIndexPath:tmpIndexPath]];
+            [self.navigationController pushViewController:vc animated:YES];
+            break;
+        }
+    }
+}
+
 #pragma mark - iCarousel Delegate
 - (NSInteger)numberOfItemsInCarousel:(iCarousel *)carousel{
     if (carousel.tag == 1000) {
-//        NSLog(@"%d", self.IntroVM.indexNumber);
-        return self.IntroVM.indexNumber;
+        return self.introVM.indexNumber;
     }
-    return self.IntroVM.starNumber;
+    return self.introVM.starNumber;
 }
 
 - (UIView *)carousel:(iCarousel *)carousel viewForItemAtIndex:(NSInteger)index reusingView:(UIView *)view{
@@ -42,7 +61,7 @@
             iconIV.tag = 10000;
         }
         UIImageView *iconIV = (UIImageView *)[view viewWithTag:10000];
-        [iconIV setImageWithURL:nil placeholder:[UIImage imageNamed:@"分类"]];
+        [iconIV setImageWithURL:[self.introVM indexIconURLForIndex:index] placeholder:[UIImage imageNamed:@"分类"]];
         return view;
     }else{
         if (!view) {
@@ -67,12 +86,34 @@
             iconIV.tag = 200;
         }
         UILabel *nameLb = (UILabel *)[view viewWithTag:100];
-        nameLb.text = @"hello world";
+        nameLb.text = [self.introVM starNameForIndex:index];
         UIImageView *iconIV = (UIImageView *)[view viewWithTag:200];
-        [iconIV setImageWithURL:nil placeholder:[UIImage imageNamed:@"分类"]];
+        [iconIV setImageWithURL:[self.introVM starIconURLForIndex:index] placeholder:[UIImage imageNamed:@"分类"]];
         return view;
     }
     return nil;
+}
+
+- (CGFloat)carousel:(iCarousel *)carousel valueForOption:(iCarouselOption)option withDefault:(CGFloat)value{
+    if (option == iCarouselOptionWrap) {
+        return YES;
+    }
+    return value;
+}
+
+- (void)carousel:(iCarousel *)carousel didSelectItemAtIndex:(NSInteger)index{
+    if (carousel.tag == 1000) {
+        [Factory playVideo:[self.introVM indexURLForIndex:index]];
+    }
+}
+
+- (void)carouselCurrentItemIndexDidChange:(iCarousel *)carousel{
+    if (carousel.tag == 1000) {
+        NSInteger index = carousel.currentItemIndex;
+        MMIntroIndexCell *cell = (MMIntroIndexCell *)[_collectionView cellForItemAtIndexPath:[NSIndexPath indexPathForRow:0 inSection:0]];
+        cell.titleLb.text = [self.introVM indexTitleForIndex:index];
+        cell.pageControl.currentPage = index;
+    }
 }
 
 #pragma mark - UICollectionViewDelegateFlowLayout Delegate
@@ -110,9 +151,16 @@
     return CGSizeZero;
 }
 
+- (CGSize)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout *)collectionViewLayout referenceSizeForHeaderInSection:(NSInteger)section{
+    if (section == 0) {
+        return CGSizeZero;
+    }
+    return CGSizeMake(kScreenW, 35);
+}
+
 #pragma mark - collectionView Delegate
 - (NSInteger)numberOfSectionsInCollectionView:(UICollectionView *)collectionView{
-    return 3;
+    return 2 + self.introVM.linkNumber;
 }
 
 - (NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section{
@@ -122,37 +170,85 @@
     if (section == 1) {
         return 2;
     }
-    return 2;
+    return [self.introVM linkNumberForSection:section - 2];
 }
 
 - (UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath{
     if (indexPath.section == 0) {
         MMIntroIndexCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:@"MMIntroIndexCell" forIndexPath:indexPath];
-        cell.backgroundColor = [UIColor redColor];
         cell.icDelegate = self;
+        cell.pageControl.numberOfPages = self.introVM.indexNumber;
+        cell.pageControl.currentPage = 0;
+        cell.titleLb.text = [self.introVM indexTitleForIndex:indexPath.row];
+        [cell.ic0 reloadData];
+        [cell.ic1 reloadData];
         return cell;
     }else if (indexPath.section == 1) {
         MMCategoryCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:@"MMCategoryCell" forIndexPath:indexPath];
-        cell.backgroundColor = [UIColor redColor];
+        NSInteger row = indexPath.row;
+        cell.titleLb.text = [self.introVM recommendTitleForRow:row];
+        cell.viewLb.text = [self.introVM recommendViewForRow:row];
+        cell.nickLb.text = [self.introVM recommendNickForRow:row];
+        [cell.iconIV setImageWithURL:[self.introVM recommendIconURLForRow:row] placeholder:[UIImage imageNamed:@"分类"]];
         return cell;
     }else{
         MMCategoryCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:@"MMCategoryCell" forIndexPath:indexPath];
         cell.backgroundColor = [UIColor redColor];
+        NSIndexPath *tmpIndexPath = [NSIndexPath indexPathForRow:indexPath.row inSection:indexPath.section - 2];
+        cell.titleLb.text = [self.introVM linkTitleForIndexPath:tmpIndexPath];
+        cell.viewLb.text = [self.introVM linkViewForIndexPath:tmpIndexPath];
+        cell.nickLb.text = [self.introVM linkNickForIndexPath:tmpIndexPath];
+        [cell.iconIV setImageWithURL:[self.introVM linkIconURLForIndexPath:tmpIndexPath] placeholderImage:[UIImage imageNamed:@"分类"]];
         return cell;
     }
+}
+
+- (void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath{
+    if (indexPath.section == 1) {
+        [Factory playVideo:[self.introVM recommendVideoURLForRow:indexPath.row]];
+    }
+    if (indexPath.section > 1) {
+        NSIndexPath *tmpIndexPath = [NSIndexPath indexPathForRow:indexPath.row inSection:indexPath.section - 2];
+        [Factory playVideo:[self.introVM linkVideoURLForIndexPath:tmpIndexPath]];
+    }
+}
+
+- (UICollectionReusableView *)collectionView:(UICollectionView *)collectionView viewForSupplementaryElementOfKind:(NSString *)kind atIndexPath:(NSIndexPath *)indexPath{
+    if (indexPath.section == 0) {
+        return nil;
+    }
+    MMIntroSectionHeaderView *headerView = [collectionView dequeueReusableSupplementaryViewOfKind:UICollectionElementKindSectionHeader withReuseIdentifier:@"MMIntroSectionHeaderView" forIndexPath:indexPath];
+    if (indexPath.section == 1) {
+        headerView.btnMode = IntroBtnModeChange;
+        headerView.titleLb.text = @"精彩推荐";
+    }
+    if (indexPath.section > 1) {
+        headerView.btnMode = IntroBtnModeMore;
+        NSIndexPath *tmpIndexPath = [NSIndexPath indexPathForRow:indexPath.row inSection:indexPath.section - 2];
+        headerView.titleLb.text = [self.introVM linkCategoryNameForIndexPath:tmpIndexPath];
+    }
+    headerView.indexPath = indexPath;
+    headerView.delegate = self;
+    return headerView;
 }
 
 #pragma mark - LifeCycle 生命周期
 - (instancetype)init{
     if (self = [super init]) {
         self.title = @"推荐";
+        self.tabBarItem.image = [UIImage imageNamed:@"推荐_默认"];
+        self.tabBarItem.selectedImage = [UIImage imageNamed:@"推荐-焦点"];
     }
     return self;
 }
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    [self collectionView];
+    [self.collectionView beginHeaderRefresh];
+    [Factory addSearchItemToVC:self clickHandler:^{
+        MMSearchViewController *vc = [MMSearchViewController new];
+        [self.navigationController pushViewController:vc animated:YES];
+    }];
 }
 
 - (void)didReceiveMemoryWarning {
@@ -168,9 +264,10 @@
         _collectionView.dataSource = self;
         [_collectionView registerClass:[MMIntroIndexCell class] forCellWithReuseIdentifier:@"MMIntroIndexCell"];
         [_collectionView registerClass:[MMCategoryCell class] forCellWithReuseIdentifier:@"MMCategoryCell"];
+        [_collectionView registerClass:[MMIntroSectionHeaderView class] forSupplementaryViewOfKind:UICollectionElementKindSectionHeader withReuseIdentifier:@"MMIntroSectionHeaderView"];
         WK(weakSelf);
         [_collectionView addHeaderRefresh:^{
-            [weakSelf.IntroVM getDataWithRequestMode:RequestModeRefresh completionHandler:^(NSError *error) {
+            [weakSelf.introVM getDataWithRequestMode:RequestModeRefresh completionHandler:^(NSError *error) {
                 if (!error) {
                     [weakSelf.collectionView reloadData];
                 }
@@ -186,11 +283,11 @@
 	return _collectionView;
 }
 
-- (MMIntroViewModel *)IntroVM {
-	if(_IntroVM == nil) {
-		_IntroVM = [[MMIntroViewModel alloc] init];
+- (MMIntroViewModel *)introVM {
+	if(_introVM == nil) {
+		_introVM = [[MMIntroViewModel alloc] init];
 	}
-	return _IntroVM;
+	return _introVM;
 }
 
 @end

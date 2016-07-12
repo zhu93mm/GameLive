@@ -11,8 +11,7 @@
 #import "MMCategoriesViewController.h"
 #import "MMLiveListViewController.h"
 #import "MMChatViewController.h"
-
-#import "MMLiveNetManager.h"
+//#import "MMLiveNetManager.h"
 
 @interface AppDelegate ()
 
@@ -26,9 +25,9 @@
     [self setupGlobalConfig];
     
     //用于测试解析是否成功
-    MMLiveNetManager *manager = [MMLiveNetManager getIntroCompletionHandler:^(id model, NSError *error) {
-        NSLog(@"");
-    }];
+//    MMLiveNetManager *manager = [MMLiveNetManager getIntroCompletionHandler:^(id model, NSError *error) {
+//        NSLog(@"");
+//    }];
     
     _window = [[UIWindow alloc] initWithFrame:[UIScreen mainScreen].bounds];
     _window.backgroundColor = [UIColor whiteColor];
@@ -50,7 +49,7 @@
         UINavigationController *cateNavi = [[UINavigationController alloc] initWithRootViewController:cateVC];
         UINavigationController *liveListNavi = [[UINavigationController alloc] initWithRootViewController:liveListVC];
         UINavigationController *chatNavi = [[UINavigationController alloc] initWithRootViewController:chatVC];
-        //_tabC.viewControllers = @[introNavi, cateNavi, liveListNavi, chatNavi];
+        _tabC.viewControllers = @[introNavi, cateNavi, liveListNavi];
     }
     return _tabC;
 }

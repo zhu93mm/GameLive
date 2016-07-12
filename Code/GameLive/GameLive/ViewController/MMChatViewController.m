@@ -17,6 +17,8 @@
 - (instancetype)init{
     if (self = [super init]) {
         self.title = @"聊一聊";
+        self.tabBarItem.image = [UIImage imageNamed:@"我的_默认"];
+        self.tabBarItem.selectedImage = [UIImage imageNamed:@"我的-焦点"];
     }
     return self;
 }

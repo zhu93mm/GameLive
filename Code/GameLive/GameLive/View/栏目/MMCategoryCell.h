@@ -10,4 +10,9 @@
 
 @interface MMCategoryCell : UICollectionViewCell
 
+@property (nonatomic) UIImageView *iconIV;
+@property (nonatomic) UILabel *nickLb;
+@property (nonatomic) UILabel *viewLb;
+@property (nonatomic) UILabel *titleLb;
+
 @end

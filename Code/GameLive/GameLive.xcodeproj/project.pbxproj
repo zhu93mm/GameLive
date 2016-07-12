@@ -16,6 +16,11 @@
 		A57B8EF41D214A42007DC601 /* MMLiveListCell.m in Sources */ = {isa = PBXBuildFile; fileRef = A57B8EF31D214A42007DC601 /* MMLiveListCell.m */; };
 		A59CA7AC1D23EE3E00B9B081 /* MMChatViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A59CA7AB1D23EE3E00B9B081 /* MMChatViewController.m */; };
 		A59CA7B51D23F59300B9B081 /* MMPlayerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A59CA7B41D23F59300B9B081 /* MMPlayerViewController.m */; };
+		A5CF34ED1D33830E003A408F /* MMIntroSectionHeaderView.m in Sources */ = {isa = PBXBuildFile; fileRef = A5CF34EC1D33830E003A408F /* MMIntroSectionHeaderView.m */; };
+		A5CF34EF1D3399C6003A408F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A5CF34EE1D3399C6003A408F /* Assets.xcassets */; };
+		A5CF34F21D33A428003A408F /* MMSearchViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A5CF34F11D33A428003A408F /* MMSearchViewController.m */; };
+		A5CF34F61D33BA01003A408F /* MMSearchModel.m in Sources */ = {isa = PBXBuildFile; fileRef = A5CF34F51D33BA01003A408F /* MMSearchModel.m */; };
+		A5CF34FA1D33BAF2003A408F /* MMSearchViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = A5CF34F91D33BAF2003A408F /* MMSearchViewModel.m */; };
 		A5D7EB4B1D22304800176E5F /* MMLiveListViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = A5D7EB4A1D22304800176E5F /* MMLiveListViewModel.m */; };
 		A5D7ED801D229B0400176E5F /* MMCategoryModel.m in Sources */ = {isa = PBXBuildFile; fileRef = A5D7ED7F1D229B0400176E5F /* MMCategoryModel.m */; };
 		A5D7ED831D22A19E00176E5F /* MMCategoryViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = A5D7ED821D22A19E00176E5F /* MMCategoryViewModel.m */; };
@@ -30,7 +35,6 @@
 		A5F7B1D81D1FB0D2003AD0EF /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = A5F7B1D71D1FB0D2003AD0EF /* main.m */; };
 		A5F7B1DB1D1FB0D2003AD0EF /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = A5F7B1DA1D1FB0D2003AD0EF /* AppDelegate.m */; };
 		A5F7B1E11D1FB0D2003AD0EF /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A5F7B1DF1D1FB0D2003AD0EF /* Main.storyboard */; };
-		A5F7B1E31D1FB0D2003AD0EF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A5F7B1E21D1FB0D2003AD0EF /* Assets.xcassets */; };
 		A5F7B1E61D1FB0D2003AD0EF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A5F7B1E41D1FB0D2003AD0EF /* LaunchScreen.storyboard */; };
 		A5F7B1FC1D1FC1F2003AD0EF /* NSObject+ViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = A5F7B1FB1D1FC1F2003AD0EF /* NSObject+ViewModel.m */; };
 		A5F7B1FF1D1FC20C003AD0EF /* NSObject+AFNetWorking.m in Sources */ = {isa = PBXBuildFile; fileRef = A5F7B1FE1D1FC20C003AD0EF /* NSObject+AFNetWorking.m */; };
@@ -67,6 +71,15 @@
 		A59CA7AB1D23EE3E00B9B081 /* MMChatViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MMChatViewController.m; sourceTree = "<group>"; };
 		A59CA7B31D23F59300B9B081 /* MMPlayerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MMPlayerViewController.h; sourceTree = "<group>"; };
 		A59CA7B41D23F59300B9B081 /* MMPlayerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MMPlayerViewController.m; sourceTree = "<group>"; };
+		A5CF34EB1D33830D003A408F /* MMIntroSectionHeaderView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MMIntroSectionHeaderView.h; sourceTree = "<group>"; };
+		A5CF34EC1D33830E003A408F /* MMIntroSectionHeaderView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MMIntroSectionHeaderView.m; sourceTree = "<group>"; };
+		A5CF34EE1D3399C6003A408F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		A5CF34F01D33A428003A408F /* MMSearchViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MMSearchViewController.h; sourceTree = "<group>"; };
+		A5CF34F11D33A428003A408F /* MMSearchViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MMSearchViewController.m; sourceTree = "<group>"; };
+		A5CF34F41D33BA01003A408F /* MMSearchModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MMSearchModel.h; sourceTree = "<group>"; };
+		A5CF34F51D33BA01003A408F /* MMSearchModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MMSearchModel.m; sourceTree = "<group>"; };
+		A5CF34F81D33BAF2003A408F /* MMSearchViewModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MMSearchViewModel.h; sourceTree = "<group>"; };
+		A5CF34F91D33BAF2003A408F /* MMSearchViewModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MMSearchViewModel.m; sourceTree = "<group>"; };
 		A5D7EB491D22304800176E5F /* MMLiveListViewModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MMLiveListViewModel.h; sourceTree = "<group>"; };
 		A5D7EB4A1D22304800176E5F /* MMLiveListViewModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MMLiveListViewModel.m; sourceTree = "<group>"; };
 		A5D7ED7E1D229B0400176E5F /* MMCategoryModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MMCategoryModel.h; sourceTree = "<group>"; };
@@ -94,7 +107,6 @@
 		A5F7B1D91D1FB0D2003AD0EF /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		A5F7B1DA1D1FB0D2003AD0EF /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		A5F7B1E01D1FB0D2003AD0EF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		A5F7B1E21D1FB0D2003AD0EF /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Assets.xcassets; path = ../Assets.xcassets; sourceTree = "<group>"; };
 		A5F7B1E51D1FB0D2003AD0EF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		A5F7B1E71D1FB0D2003AD0EF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A5F7B1FA1D1FC1F2003AD0EF /* NSObject+ViewModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+ViewModel.h"; sourceTree = "<group>"; };
@@ -213,6 +225,8 @@
 		A59CA7A51D23C3C700B9B081 /* 其他 */ = {
 			isa = PBXGroup;
 			children = (
+				A5CF34F01D33A428003A408F /* MMSearchViewController.h */,
+				A5CF34F11D33A428003A408F /* MMSearchViewController.m */,
 				A59CA7B31D23F59300B9B081 /* MMPlayerViewController.h */,
 				A59CA7B41D23F59300B9B081 /* MMPlayerViewController.m */,
 			);
@@ -226,6 +240,24 @@
 				A59CA7AB1D23EE3E00B9B081 /* MMChatViewController.m */,
 			);
 			name = "聊一聊";
+			sourceTree = "<group>";
+		};
+		A5CF34F31D33B9DB003A408F /* 其他 */ = {
+			isa = PBXGroup;
+			children = (
+				A5CF34F41D33BA01003A408F /* MMSearchModel.h */,
+				A5CF34F51D33BA01003A408F /* MMSearchModel.m */,
+			);
+			path = "其他";
+			sourceTree = "<group>";
+		};
+		A5CF34F71D33BA63003A408F /* 其他 */ = {
+			isa = PBXGroup;
+			children = (
+				A5CF34F81D33BAF2003A408F /* MMSearchViewModel.h */,
+				A5CF34F91D33BAF2003A408F /* MMSearchViewModel.m */,
+			);
+			path = "其他";
 			sourceTree = "<group>";
 		};
 		A5ED5BCF1D211D540032AE9C /* 栏目 */ = {
@@ -275,6 +307,8 @@
 			children = (
 				A5EE550F1D2E1878002AFA13 /* MMIntroIndexCell.h */,
 				A5EE55101D2E1878002AFA13 /* MMIntroIndexCell.m */,
+				A5CF34EB1D33830D003A408F /* MMIntroSectionHeaderView.h */,
+				A5CF34EC1D33830E003A408F /* MMIntroSectionHeaderView.m */,
 			);
 			path = "推荐";
 			sourceTree = "<group>";
@@ -365,6 +399,7 @@
 				A53CAF631D2F8D28007EE214 /* 推荐 */,
 				A57B8EE41D21338E007DC601 /* 栏目 */,
 				A57B8EE81D21339A007DC601 /* 直播 */,
+				A5CF34F31D33B9DB003A408F /* 其他 */,
 				A5F7B20E1D1FC31F003AD0EF /* MMBaseModel.h */,
 				A5F7B20F1D1FC31F003AD0EF /* MMBaseModel.m */,
 			);
@@ -384,7 +419,7 @@
 			isa = PBXGroup;
 			children = (
 				A5F7B1DF1D1FB0D2003AD0EF /* Main.storyboard */,
-				A5F7B1E21D1FB0D2003AD0EF /* Assets.xcassets */,
+				A5CF34EE1D3399C6003A408F /* Assets.xcassets */,
 				A5F7B1E41D1FB0D2003AD0EF /* LaunchScreen.storyboard */,
 			);
 			path = Resource;
@@ -436,6 +471,7 @@
 				A53CAF671D2FA7B2007EE214 /* 推荐 */,
 				A5ED5BD61D211D8B0032AE9C /* 栏目 */,
 				A57B8EE31D213173007DC601 /* 直播 */,
+				A5CF34F71D33BA63003A408F /* 其他 */,
 				A5F7B21B1D1FD618003AD0EF /* MMBaseViewModel.h */,
 				A5F7B21C1D1FD618003AD0EF /* MMBaseViewModel.m */,
 			);
@@ -513,7 +549,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				A5F7B1E61D1FB0D2003AD0EF /* LaunchScreen.storyboard in Resources */,
-				A5F7B1E31D1FB0D2003AD0EF /* Assets.xcassets in Resources */,
+				A5CF34EF1D3399C6003A408F /* Assets.xcassets in Resources */,
 				A5F7B1E11D1FB0D2003AD0EF /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -583,6 +619,7 @@
 				A57B8EF11D21354E007DC601 /* MMLiveListViewController.m in Sources */,
 				A5D7ED801D229B0400176E5F /* MMCategoryModel.m in Sources */,
 				A59CA7AC1D23EE3E00B9B081 /* MMChatViewController.m in Sources */,
+				A5CF34F21D33A428003A408F /* MMSearchViewController.m in Sources */,
 				A5ED5BD91D211D8B0032AE9C /* MMCategoriesViewModel.m in Sources */,
 				A5ED5BDF1D211DB60032AE9C /* MMCategoriesCell.m in Sources */,
 				A5F7B1DB1D1FB0D2003AD0EF /* AppDelegate.m in Sources */,
@@ -595,6 +632,7 @@
 				A5EE55111D2E1878002AFA13 /* MMIntroIndexCell.m in Sources */,
 				A5F7B21A1D1FCD86003AD0EF /* NSString+MM.m in Sources */,
 				A5F7B1FC1D1FC1F2003AD0EF /* NSObject+ViewModel.m in Sources */,
+				A5CF34ED1D33830E003A408F /* MMIntroSectionHeaderView.m in Sources */,
 				A59CA7B51D23F59300B9B081 /* MMPlayerViewController.m in Sources */,
 				A5F7B1D81D1FB0D2003AD0EF /* main.m in Sources */,
 				A5F7B2051D1FC28E003AD0EF /* UIScrollView+Refresh.m in Sources */,
@@ -602,10 +640,12 @@
 				A5ED5BD41D211D540032AE9C /* MMCategoriesViewController.m in Sources */,
 				A5ED5BD51D211D540032AE9C /* MMCategoryViewController.m in Sources */,
 				A5F7B2101D1FC31F003AD0EF /* MMBaseModel.m in Sources */,
+				A5CF34F61D33BA01003A408F /* MMSearchModel.m in Sources */,
 				A57B8EEB1D21339A007DC601 /* MMLiveListModel.m in Sources */,
 				A5F7B1FF1D1FC20C003AD0EF /* NSObject+AFNetWorking.m in Sources */,
 				A5D7ED831D22A19E00176E5F /* MMCategoryViewModel.m in Sources */,
 				A5F7B21D1D1FD618003AD0EF /* MMBaseViewModel.m in Sources */,
+				A5CF34FA1D33BAF2003A408F /* MMSearchViewModel.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -33,7 +33,7 @@
 }
 
 - (void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath{
-    
+    [Factory playVideo:[self.categoryVM videoURLForRow:indexPath.row]];
 }
 
 #pragma mark - LifeCycle 生命周期

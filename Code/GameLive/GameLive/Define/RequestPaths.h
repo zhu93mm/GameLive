@@ -17,6 +17,9 @@
 /** 某栏目房间列表 */
 #define kCategoryRoomsPath @"/json/categories/%@/list%@.json"
 
+/** 搜索功能 */
+#define kSearchPath @"api/v1"
+
 /**直播房间列表*/
 #define kRoomsPath @"/json/play/list%@.json"
 
